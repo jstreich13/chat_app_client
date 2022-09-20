@@ -41,7 +41,16 @@
   border-radius: 8px;
   border: solid 2px #333;
   font-size: 1.25rem;
-  background-color: rgba(256, 256, 256, 0.8);
+  align-self: flex-end;
+  background-color: rgb(255, 143, 178);
+  background-image: linear-gradient(
+    rgb(255, 143, 178) 0%,
+    rgb(167, 151, 255) 50%,
+    rgb(0, 229, 255) 100%
+  );
+  background-attachment: fixed;
+  border-radius: 0.5em 0.5em 0 0.5em;
+  color: white;
 }
 
 .messageInner {

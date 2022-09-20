@@ -1,5 +1,6 @@
 import SocketsProvider from "./context/socket.context";
-import Home from "./pages/Home";
+import "../src/styles/globals.scss";
+import React from "react";
 
 function App({ Component, pageProps }) {
   return (

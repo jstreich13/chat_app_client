@@ -30,7 +30,7 @@ function RoomsComponent() {
     <nav className="wrapper">
       <div className="createRoomWrapper">
         <input ref={newRoomRef} placeholder="Chat room name" />
-        <button className="cta" onClick={handleCreateRoom}>
+        <button className="button-all" onClick={handleCreateRoom}>
           CREATE NEW ROOM 🚀
         </button>
       </div>
@@ -40,8 +40,9 @@ function RoomsComponent() {
           return (
             <div key={key}>
               <button
+                className="button-all"
                 disabled={key === roomId}
-                title={`Join ${rooms[key].name}`}
+                title={`Enter ${rooms[key].name}`}
                 onClick={() => handleJoinRoom(key)}
               >
                 {rooms[key].name}

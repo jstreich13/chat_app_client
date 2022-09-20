@@ -1,9 +1,18 @@
 .wrapper {
   width: 250px;
-  background-color: rgba(256, 256, 256, 0.8);
   height: 100vh;
   padding: 1rem;
   border-right: solid 2px #333;
+  font-size: 1rem;
+  align-self: flex-end;
+  background-color: rgb(255, 143, 178);
+  background-image: linear-gradient(
+    rgb(255, 143, 178) 0%,
+    rgb(167, 151, 255) 50%,
+    rgb(0, 229, 255) 100%
+  );
+  background-attachment: fixed;
+  color: white;
 }
 
 .createRoomWrapper {

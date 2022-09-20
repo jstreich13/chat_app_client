@@ -31,6 +31,7 @@ function MessagesComponent() {
     newMessageRef.current.value = "";
   }
 
+  //* Scrolling to end of window when receive new message
   useEffect(() => {
     messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
@@ -46,10 +47,10 @@ function MessagesComponent() {
             return (
               <div key={index} className="message">
                 <div key={index} className="messageInner">
+                  <span className="messageBody, message" />
                   <span className="messageSender">
                     {username} - {time}
                   </span>
-                  <span className="messageBody, message" />
                 </div>
               </div>
             );
@@ -57,12 +58,10 @@ function MessagesComponent() {
           <div ref={messageEndRef} />
         </div>
         <div className="messageBox">
-          <textarea
-            rows={1}
-            placeholder="What's on your mind?"
-            ref={newMessageRef}
-          />
-          <button onClick={handleSendMessage}>SEND</button>
+          <textarea rows={1} placeholder="Say hello 👋" ref={newMessageRef} />
+          <button className="button-all" onClick={handleSendMessage}>
+            SEND
+          </button>
         </div>
       </div>
     </>

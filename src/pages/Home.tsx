@@ -22,6 +22,8 @@ export default function Home() {
     localStorage.setItem("username", value);
   }
 
+  // * Storing username for returning users
+
   useEffect(() => {
     if (usernameRef)
       usernameRef.current.value = localStorage.getItem("username") || "";
@@ -29,12 +31,13 @@ export default function Home() {
 
   return (
     <div>
-      yoooo
       {!username && (
         <div className="usernameWrapper">
           <div className="usernameInner">
             <input placeholder="enter your username" ref={usernameRef} />
-            <button onClick={handleSetUsername}>Start</button>
+            <button className="button-all" onClick={handleSetUsername}>
+              Start
+            </button>
           </div>
         </div>
       )}
