@@ -2,13 +2,23 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter";
+}
+
+.home {
+  display: flex;
+}
+
+.title {
+  background-image: url("../image-assets/aloha-nobackground.png");
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-  background-image: url("./white-studio-background.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../image-assets/whitebackground.png");
+  background-blend-mode: color-burn;
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;

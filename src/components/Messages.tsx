@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import EVENTS from "../config/events";
 import { useSockets } from "../context/socket.context";
 import "../styles/messagesComponent.scss";
+import pfp from "../image-assets/pfp-icon.png";
 
 function MessagesComponent() {
   const { socket, messages, roomId, username, setMessages } = useSockets();
@@ -41,13 +42,14 @@ function MessagesComponent() {
   }
   return (
     <>
-      <div className="wrapper">
+      <div className="messages_wrapper">
         <div className="messageList">
           {messages.map(({ message, username, time }, index) => {
             return (
               <div key={index} className="message">
+                <img className="pfp_image" src={pfp} alt="pfp" />
                 <div key={index} className="messageInner">
-                  <span className="messageBody, message" />
+                  <span className="messageBody, message">{message}</span>
                   <span className="messageSender">
                     {username} - {time}
                   </span>
@@ -57,12 +59,21 @@ function MessagesComponent() {
           })}
           <div ref={messageEndRef} />
         </div>
-        <div className="messageBox">
-          <textarea rows={1} placeholder="Say hello 👋" ref={newMessageRef} />
-          <button className="button-all" onClick={handleSendMessage}>
+        <form className="messageBox">
+          <textarea
+            typeof="submit"
+            rows={1}
+            placeholder="Say hello 👋"
+            ref={newMessageRef}
+          />
+          <button
+            type="button"
+            className="button-all"
+            onClick={handleSendMessage}
+          >
             SEND
           </button>
-        </div>
+        </form>
       </div>
     </>
   );

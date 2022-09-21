@@ -6,6 +6,7 @@ import "../styles/homeComponent.scss";
 import "../styles/messagesComponent.scss";
 import "../styles/roomComponent.scss";
 import "../styles/globals.scss";
+import title from "../image-assets/aloha-nobackground.png";
 
 export default function Home() {
   const { socket, username, setUsername } = useSockets();
@@ -30,10 +31,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="home">
       {!username && (
         <div className="usernameWrapper">
-          <div className="usernameInner">
+          <div className="usernameInner fade-in">
+            <img className="title" src={title} alt="title" />
             <input placeholder="enter your username" ref={usernameRef} />
             <button className="button-all" onClick={handleSetUsername}>
               Start

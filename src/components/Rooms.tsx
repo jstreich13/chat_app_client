@@ -27,7 +27,7 @@ function RoomsComponent() {
   }
 
   return (
-    <nav className="wrapper">
+    <nav className="rooms_wrapper">
       <div className="createRoomWrapper">
         <input ref={newRoomRef} placeholder="Chat room name" />
         <button className="button-all" onClick={handleCreateRoom}>

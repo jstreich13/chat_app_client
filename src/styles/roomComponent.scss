@@ -1,15 +1,16 @@
-.wrapper {
-  width: 250px;
+.rooms_wrapper {
+  order: 2;
+  width: 40rem;
   height: 100vh;
   padding: 1rem;
   border-right: solid 2px #333;
   font-size: 1rem;
   align-self: flex-end;
-  background-color: rgb(255, 143, 178);
+  background-color: #6667ab;
   background-image: linear-gradient(
-    rgb(255, 143, 178) 0%,
+    rgb(155, 143, 278) 0%,
     rgb(167, 151, 255) 50%,
-    rgb(0, 229, 255) 100%
+    rgb(80, 80, 200) 100%
   );
   background-attachment: fixed;
   color: white;
